@@ -1,0 +1,17 @@
+Sensitive work should not require handing a model your credentials. CipherVault AI is a browser-local demonstration of a privacy-oriented AI gateway. It inspects selected sensitive values, replaces them with tokens, and makes policy decisions before a potential model boundary. This walkthrough shows the real interface, using synthetic data.
+
+Start with a familiar workflow: a developer enters an example API key and asks how to rotate it safely. The key is fake test data. CipherVault keeps the prompt in the current browser tab. A real external model is not connected, so this prompt is not sent to a provider.
+
+The local detector checks a limited set of patterns, including credentials, access tokens, database URLs, contact details, and custom phrases. When it finds a match, the value is encrypted in memory and replaced with an ordered placeholder such as Secret underscore zero zero one. The preview panel shows sanitized context that could be used across a future model boundary.
+
+Instead of making a network call, the prototype returns a clearly labeled canned demonstration response. The original prompt remains visible to you, but the sanitized payload trace excludes the fake credential. The dashboard separately reports zero provider transmissions because the external model connection is intentionally off.
+
+Open the local vault view to see the key-isolation concept. Browser Web Crypto creates a non-exportable AES GCM key, and encrypted entries live only in this tab's memory. Clearing them or refreshing ends the demo state. This is not a hardware enclave, a hardened vault, or a guarantee of physical memory zeroization.
+
+The attack lab runs eight curated local policy fixtures. These include direct requests for a master key, arbitrary secrets, vault export, environment variables, and attempts to override instructions. The result is limited to this selected fixture set. It is not an exhaustive security test or proof against unknown attacks.
+
+Security events record the rule category, timestamp, and outcome without including the original prompt or detected value. The flow panel makes the intended boundary visible: user context enters CipherVault, the policy layer evaluates it, and only approved sanitized context could reach a future model. In this prototype, that model step remains off.
+
+CipherVault does not claim that an AI sees no data, that arbitrary text can be hidden while it is understood, or that any system is impossible to hack. Pattern matching is incomplete and policy coverage is limited. A real gateway needs server-side key custody, hardened controls, and independent review. CipherVault AI: useful context, no key access.
+
+Use synthetic data only. Inspect every decision carefully, and remember: this prototype is not a security certification.

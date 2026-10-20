@@ -1,0 +1,135 @@
+1
+00:00:00,400 --> 00:00:03,800
+Sensitive work should not require handing a model your credentials.
+
+2
+00:00:03,800 --> 00:00:09,900
+CipherVault AI is a browser-local demonstration of a privacy-oriented AI gateway.
+
+3
+00:00:09,900 --> 00:00:17,900
+It inspects selected sensitive values, replaces them with tokens, and makes policy decisions before a potential model boundary.
+
+4
+00:00:17,900 --> 00:00:22,000
+This walkthrough shows the real interface, using synthetic data.
+
+5
+00:00:22,000 --> 00:00:24,500
+Start with a familiar workflow.
+
+6
+00:00:24,500 --> 00:00:29,700
+A developer enters an example API key and asks how to rotate it safely.
+
+7
+00:00:29,700 --> 00:00:32,000
+The key is fake test data.
+
+8
+00:00:32,000 --> 00:00:35,400
+CipherVault keeps the prompt in the current browser tab.
+
+9
+00:00:35,400 --> 00:00:40,200
+A real external model is not connected, so this prompt is not sent to a provider.
+
+10
+00:00:40,960 --> 00:00:49,960
+The local detector checks a limited set of patterns, including credentials, access tokens, database URLs, contact details, and custom phrases.
+
+11
+00:00:49,960 --> 00:00:58,060
+When it finds a match, the value is encrypted in memory and replaced with an ordered placeholder such as Secret underscore zero zero one.
+
+12
+00:00:58,060 --> 00:01:03,660
+The preview panel shows sanitized context that could be used across a future model boundary.
+
+13
+00:01:03,660 --> 00:01:09,960
+Instead of making a network call, the prototype returns a clearly labeled canned demonstration response.
+
+14
+00:01:09,960 --> 00:01:16,360
+The original prompt remains visible to you, but the sanitized payload trace excludes the fake credential.
+
+15
+00:01:16,360 --> 00:01:23,760
+The dashboard separately reports zero provider transmissions because the external model connection is intentionally off.
+
+16
+00:01:24,380 --> 00:01:27,780
+Open the local vault view to see the key-isolation concept.
+
+17
+00:01:27,780 --> 00:01:35,380
+Browser Web Crypto creates a non-exportable AES GCM key, and encrypted entries live only in this tab's memory.
+
+18
+00:01:35,380 --> 00:01:38,580
+Clearing them or refreshing ends the demo state.
+
+19
+00:01:38,580 --> 00:01:44,680
+This is not a hardware enclave, a hardened vault, or a guarantee of physical memory zeroization.
+
+20
+00:01:44,680 --> 00:01:48,880
+The attack lab runs eight curated local policy fixtures.
+
+21
+00:01:48,880 --> 00:01:57,580
+These include direct requests for a master key, arbitrary secrets, vault export, environment variables, and attempts to override instructions.
+
+22
+00:01:57,580 --> 00:02:00,580
+The result is limited to this selected fixture set.
+
+23
+00:02:00,580 --> 00:02:04,580
+It is not an exhaustive security test or proof against unknown attacks.
+
+24
+00:02:05,180 --> 00:02:12,180
+Security events record the rule category, timestamp, and outcome without including the original prompt or detected value.
+
+25
+00:02:12,180 --> 00:02:15,480
+The flow panel makes the intended boundary visible.
+
+26
+00:02:15,480 --> 00:02:23,680
+User context enters CipherVault, the policy layer evaluates it, and only approved sanitized context could reach a future model.
+
+27
+00:02:23,680 --> 00:02:26,580
+In this prototype, that model step remains off.
+
+28
+00:02:26,580 --> 00:02:35,780
+CipherVault does not claim that an AI sees no data, that arbitrary text can be hidden while it is understood, or that any system is impossible to hack.
+
+29
+00:02:35,780 --> 00:02:39,480
+Pattern matching is incomplete and policy coverage is limited.
+
+30
+00:02:39,480 --> 00:02:44,980
+A real gateway needs server-side key custody, hardened controls, and independent review.
+
+31
+00:02:44,980 --> 00:02:49,480
+CipherVault AI: useful context, no key access.
+
+32
+00:02:50,080 --> 00:02:51,580
+Use synthetic data only.
+
+33
+00:02:51,580 --> 00:02:53,780
+Inspect every decision carefully.
+
+34
+00:02:53,780 --> 00:02:58,080
+And remember: this prototype is not a security certification.

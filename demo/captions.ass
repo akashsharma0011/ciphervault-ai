@@ -1,0 +1,48 @@
+[Script Info]
+ScriptType: v4.00+
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+PlayResX: 1920
+PlayResY: 1080
+YCbCr Matrix: TV.601
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,DejaVu Sans,28,&H00FFFFFF,&H000000FF,&HCC0B121A,&HCC0B121A,0,0,0,0,100,100,0,0,1,1.5,0,2,150,150,44,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.40,0:00:03.80,Default,,0,0,0,,Sensitive work should not require handing a model your credentials.
+Dialogue: 0,0:00:03.80,0:00:09.90,Default,,0,0,0,,CipherVault AI is a browser-local demonstration of a privacy-oriented AI gateway.
+Dialogue: 0,0:00:09.90,0:00:17.90,Default,,0,0,0,,It inspects selected sensitive values, replaces them with tokens, and makes policy decisions before a potential model boundary.
+Dialogue: 0,0:00:17.90,0:00:22.00,Default,,0,0,0,,This walkthrough shows the real interface, using synthetic data.
+Dialogue: 0,0:00:22.00,0:00:24.50,Default,,0,0,0,,Start with a familiar workflow.
+Dialogue: 0,0:00:24.50,0:00:29.70,Default,,0,0,0,,A developer enters an example API key and asks how to rotate it safely.
+Dialogue: 0,0:00:29.70,0:00:32.00,Default,,0,0,0,,The key is fake test data.
+Dialogue: 0,0:00:32.00,0:00:35.40,Default,,0,0,0,,CipherVault keeps the prompt in the current browser tab.
+Dialogue: 0,0:00:35.40,0:00:40.20,Default,,0,0,0,,A real external model is not connected, so this prompt is not sent to a provider.
+Dialogue: 0,0:00:40.96,0:00:49.96,Default,,0,0,0,,The local detector checks a limited set of patterns, including credentials, access tokens, database URLs, contact details, and custom phrases.
+Dialogue: 0,0:00:49.96,0:00:58.06,Default,,0,0,0,,When it finds a match, the value is encrypted in memory and replaced with an ordered placeholder such as Secret underscore zero zero one.
+Dialogue: 0,0:00:58.06,0:01:03.66,Default,,0,0,0,,The preview panel shows sanitized context that could be used across a future model boundary.
+Dialogue: 0,0:01:03.66,0:01:09.96,Default,,0,0,0,,Instead of making a network call, the prototype returns a clearly labeled canned demonstration response.
+Dialogue: 0,0:01:09.96,0:01:16.36,Default,,0,0,0,,The original prompt remains visible to you, but the sanitized payload trace excludes the fake credential.
+Dialogue: 0,0:01:16.36,0:01:23.76,Default,,0,0,0,,The dashboard separately reports zero provider transmissions because the external model connection is intentionally off.
+Dialogue: 0,0:01:24.38,0:01:27.78,Default,,0,0,0,,Open the local vault view to see the key-isolation concept.
+Dialogue: 0,0:01:27.78,0:01:35.38,Default,,0,0,0,,Browser Web Crypto creates a non-exportable AES GCM key, and encrypted entries live only in this tab's memory.
+Dialogue: 0,0:01:35.38,0:01:38.58,Default,,0,0,0,,Clearing them or refreshing ends the demo state.
+Dialogue: 0,0:01:38.58,0:01:44.68,Default,,0,0,0,,This is not a hardware enclave, a hardened vault, or a guarantee of physical memory zeroization.
+Dialogue: 0,0:01:44.68,0:01:48.88,Default,,0,0,0,,The attack lab runs eight curated local policy fixtures.
+Dialogue: 0,0:01:48.88,0:01:57.58,Default,,0,0,0,,These include direct requests for a master key, arbitrary secrets, vault export, environment variables, and attempts to override instructions.
+Dialogue: 0,0:01:57.58,0:02:00.58,Default,,0,0,0,,The result is limited to this selected fixture set.
+Dialogue: 0,0:02:00.58,0:02:04.58,Default,,0,0,0,,It is not an exhaustive security test or proof against unknown attacks.
+Dialogue: 0,0:02:05.18,0:02:12.18,Default,,0,0,0,,Security events record the rule category, timestamp, and outcome without including the original prompt or detected value.
+Dialogue: 0,0:02:12.18,0:02:15.48,Default,,0,0,0,,The flow panel makes the intended boundary visible.
+Dialogue: 0,0:02:15.48,0:02:23.68,Default,,0,0,0,,User context enters CipherVault, the policy layer evaluates it, and only approved sanitized context could reach a future model.
+Dialogue: 0,0:02:23.68,0:02:26.58,Default,,0,0,0,,In this prototype, that model step remains off.
+Dialogue: 0,0:02:26.58,0:02:35.78,Default,,0,0,0,,CipherVault does not claim that an AI sees no data, that arbitrary text can be hidden while it is understood, or that any system is impossible to hack.
+Dialogue: 0,0:02:35.78,0:02:39.48,Default,,0,0,0,,Pattern matching is incomplete and policy coverage is limited.
+Dialogue: 0,0:02:39.48,0:02:44.98,Default,,0,0,0,,A real gateway needs server-side key custody, hardened controls, and independent review.
+Dialogue: 0,0:02:44.98,0:02:49.48,Default,,0,0,0,,CipherVault AI: useful context, no key access.
+Dialogue: 0,0:02:50.08,0:02:51.58,Default,,0,0,0,,Use synthetic data only.
+Dialogue: 0,0:02:51.58,0:02:53.78,Default,,0,0,0,,Inspect every decision carefully.
+Dialogue: 0,0:02:53.78,0:02:58.08,Default,,0,0,0,,And remember: this prototype is not a security certification.

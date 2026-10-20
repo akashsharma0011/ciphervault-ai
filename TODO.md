@@ -1,0 +1,15 @@
+# CipherVault AI — Delivery Outcomes
+
+- [x] **Next.js/TypeScript product shell and responsive security dashboard** — Deliver a working Next.js App Router project in TypeScript, with a responsive CipherVault interface that communicates the zero-trust gateway concept and the flow user → CipherVault → security layer → LLM. Show protected status, local-only key status, vault lock state, secret-detection and sent counts, blocked-attack count, and a privacy score. Do not present the prototype as an AI chatbot alone or make unsupported security claims.
+
+- [x] **Secure chat, local detection, and tokenization demonstration** — Let the user enter a secure message; detect demo patterns such as credentials/API tokens and personal information; replace matches with placeholders such as `[SECRET_001]`; show the exact sanitized payload that would cross a model boundary; and show a response marked as a local simulation because no external LLM integration/key is configured. Keep raw demo secrets out of logs and external requests.
+
+- [x] **Ephemeral encrypted demo vault and key-isolation explanation** — Use established Web Crypto primitives rather than a homemade cipher. Demonstrate encrypted in-memory secret entries and a non-exportable ephemeral key isolated from the model demonstration. Clearly explain that browser-side prototype code is not a production-grade secure boundary and that the session vault is temporary.
+
+- [x] **Policy engine, attack simulation, and redacted security events** — Block demo requests to reveal the master key, arbitrary secrets/placeholders, export a vault, or read environment variables. Detect prompt-injection-style instructions, show the policy decision and protected resource, and record only redacted event details. Run controlled/curated attacks, show attempted and blocked counts and zero observed demo exposures, and label the result as a limited simulation—not proof against every attack.
+
+- [x] **Documentation and developer handoff** — Include clear install/run commands, project structure/architecture, a guided demo path, threat model, and explicit limitations. Explain that minimizing sensitive data sent to providers is the goal; do not claim that the model sees no data, that arbitrary plaintext is hidden while understood, or that the system is mathematically impossible to hack. Include no fake provider configuration or secrets.
+
+- [x] **Demo video for Devpost** — Create a landscape MP4 walkthrough of the actual product flow, targeting the source brief's 3–4 minute range where feasible. Include the problem, sanitized-context workflow, local-only key/vault status, controlled attack results, and closing CipherVault message. Make simulation/prototype limitations clear in narration or on-screen text and verify that the MP4 is playable.
+
+- [ ] **Private GitHub repository delivery** — Prepare the intended source for GitHub and use the managed connection flow to create a new private repository only after owner confirmation. Preserve the existing Manus source until transfer completion; never overwrite an existing repository or claim a successful switch without the platform's completed receipt.
