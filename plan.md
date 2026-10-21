@@ -49,6 +49,10 @@ Chosen: **Security operations console**, to make the live security state legible
 
 After the UI is implemented, produce a landscape product walkthrough using authentic captures of the running app and/or deterministic animation around those captures. Follow the supplied brief's 3–4 minute target where feasible. Show the risk of sending raw credentials, CipherVault's local detection and tokenization trace, a simulated response from sanitized context, the local-only ephemeral vault status, curated prompt-injection/policy attacks being blocked, and the dashboard result. Narration and captions will explicitly say this is a local prototype/simulation, not an external LLM integration or proof of security. Verify the resulting MP4 is playable before delivery.
 
+## Container deployment approach
+
+Use the already-enabled Webdev server capability with a committed root `Dockerfile`. Pin pnpm to the project's `11.25.0`, install from the checked-in `pnpm-lock.yaml` and `pnpm-workspace.yaml` policy, build the Next.js production application in the image, and start the production server on `0.0.0.0:$PORT` with port 3000 as the fallback. Keep the app stateless and do not introduce provider credentials, a database, or a live LLM integration. Declare the container health path as `/`, which serves the existing unauthenticated application page. The container build from the canonical checkpoint is the authoritative deployment integration check; do not claim an image was locally tested when no Docker engine is available.
+
 ## GitHub delivery
 
 Once the project is ready, initiate the managed GitHub connection workflow to create a new private repository after the owner's confirmation. Do not overwrite or adopt an existing repository, do not create a public repository, and do not say the repository switch is complete until the managed transfer reports completion. Commit and checkpoint the intended project state before initiating the transfer as required by the platform workflow.

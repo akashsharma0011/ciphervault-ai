@@ -25,6 +25,10 @@ pnpm build
 
 No API key, database, or environment file is needed. There are no external provider calls in this demo.
 
+## Container deployment
+
+The repository includes a root [`Dockerfile`](Dockerfile) for the Next.js production runtime. It installs the lockfile with the checked-in pnpm 11.25.0 policy, builds the app, and starts `next start` on `0.0.0.0:$PORT` (default `3000`). The Webdev container health route is `/`, which serves the existing app without authentication. This project uses no database or deployment secret; no live LLM provider is configured. A real LLM gateway or production key boundary would require a separate server-side security review.
+
 ## Devpost demo video
 
 Watch or download the [CipherVault AI product demo](demo/ciphervault-devpost-demo.mp4). It is a 3:01 landscape MP4 in 1920×1080 at 30 fps, with English narration and burned-in captions. The SRT sidecar, narration script, audio source segments, and captured UI frames are in `demo/`. The video shows the actual running app and clearly labels the local-only, simulated behavior.
@@ -47,6 +51,7 @@ Watch or download the [CipherVault AI product demo](demo/ciphervault-devpost-dem
 - `tests/` — focused unit tests for redaction and policy behavior.
 - `docs/architecture.md` — component and data-flow description.
 - `docs/threat-model.md` — threat assumptions and explicit limitations.
+- `docs/deployment.md` — container build, runtime port, and health-route contract.
 
 ## What this demo does not claim
 
